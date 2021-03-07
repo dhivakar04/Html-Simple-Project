@@ -1,0 +1,110 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+}
+.ground,
+.sky,
+.road {
+  position: relative;
+}
+
+.sky {
+  height: 40%;
+  background: skyblue;
+}
+
+.ground {
+  height: 30%;
+  background: seagreen;
+}
+
+.road {
+  height: 30%;
+  background: dimgray;
+  box-sizing: border-box;
+  border-top: 10px solid grey;
+  border-bottom: 10px solid grey;
+  width: 100%;
+}
+.lines {
+  box-sizing: border-box;
+  border: 5px dashed #fff;
+  height: 0px;
+  width: 100%;
+  position: absolute;
+  top: 45%;
+}
+.cloud {
+  position: absolute;
+}
+
+.cloud:nth-child(1) {
+  width: 200px;
+  top: 120px;
+  opacity: 0.5;
+  animation: wind 50s infinite linear;
+}
+.cloud:nth-child(2) {
+  width: 300px;
+  top: 0px;
+  animation: wind 40s infinite linear;
+}
+.mario {
+  position: absolute;
+  top: -60px;
+  left: 0px;
+  animation: m-drive 4s infinite linear;
+  height: 100px;
+}
+.luigi {
+  position: absolute;
+  top: -60px;
+  left: 0px;
+  height: 100px;
+  animation: l-drive 5s infinite both linear;
+}
+.toad {
+  position: absolute;
+  margin: 70px;
+  height: 80px;
+  animation: t-drive 7s infinite linear both reverse;
+}
+
+@keyframes m-drive {
+  from {
+    transform: translateX(-100px);
+  }
+  to {
+    transform: translateX(1500px);
+  }
+}
+
+@keyframes l-drive {
+  from {
+    transform: translateX(-400px);
+  }
+  to {
+    transform: translateX(1500px);
+  }
+}
+
+@keyframes t-drive {
+  from {
+    transform: translateX(-500px);
+  }
+  to {
+    transform: translateX(2000px);
+  }
+}
+
+@keyframes wind {
+  from {
+    transform: translateX(-200px);
+  }
+  to {
+    transform: translateX(1500px);
+  }
+}
